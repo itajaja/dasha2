@@ -1,9 +1,14 @@
 import React from 'react';
 import clsx from 'clsx';
-import styles from './HomepageFeatures.module.css';
+import styles from './button.module.css';
+import Link from '@docusaurus/Link';
+import { NavLink } from 'react-router-dom'
 
 export default function Button(props) {
   return (
-    <button {...props} className="d-button" />
+    <NavLink
+      {...props}
+      className={isActive => clsx(styles.button, isActive && styles.active)}
+    />
   );
 }

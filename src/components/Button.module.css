@@ -1,0 +1,30 @@
+.button {
+  background-color: silver;
+  border: 3px solid white;
+  border-right-color: black;
+  border-bottom-color: black;
+  margin: 0 5px;
+  padding: 4px;
+  font-size: large;
+  cursor: pointer;
+  /* font-family: var(--ifm-font-family-base); */
+  color: black;
+  text-decoration: none;
+}
+
+.button:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.button:active {
+  border-color: black;
+  border-right-color: white;
+  border-bottom-color: white;
+}
+
+.active {
+  border-color: black;
+  border-right-color: white;
+  border-bottom-color: white;
+}

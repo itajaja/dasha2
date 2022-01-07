@@ -6,15 +6,20 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: rgb(33, 175, 144);
-  --ifm-color-primary-darker: rgb(31, 165, 136);
-  --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: rgb(70, 203, 174);
-  --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest: rgb(146, 224, 208);
+  --ifm-color-primary: blue;
+  --ifm-color-primary-dark: blue;
+  --ifm-color-primary-darker: blue;
+  --ifm-color-primary-darkest: blue;
+  --ifm-color-primary-light: blue;
+  --ifm-color-primary-lighter: blue;
+  --ifm-color-primary-lightest: blue;
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: 'Windows 95';
+  --ifm-heading-font-weight: 100;
+  --ifm-footer-background-color: silver;
+  --ifm-toc-border-color: transparent;
+  --ifm-navbar-background-color: silver;
+  --ifm-navbar-shadow: none;
 }
 
 @font-face {
@@ -26,17 +31,6 @@
 }
 
 
-.docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.1);
-  display: block;
-  margin: 0 calc(-1 * var(--ifm-pre-padding));
-  padding: 0 var(--ifm-pre-padding);
-}
-
-html[data-theme='dark'] .docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
 body {
   background-color: silver;
   cursor: url(../square-16.png), auto;
@@ -46,35 +40,43 @@ div {
   cursor: url(../square-16.png), auto;
 }
 
-.d-main {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-  padding: 20px;
-}
-
-.d-button {
+hr {
   background-color: silver;
-  border: 3px solid white;
-  border-right-color: black;
-  border-bottom-color: black;
-  margin: 0 5px;
-  padding: 4px;
-  font-size: large;
-  cursor: pointer;
-  font-family: var(--ifm-font-family-base);
-}
-
-.d-button:active {
-  border-color: black;
+  border: 3px solid black;
   border-right-color: white;
   border-bottom-color: white;
 }
 
-hr {
-  background-color: silver;
-  border: 3px solid black;
+html footer {
+  background-color: black;
+}
+
+/* .theme-doc-sidebar-item-link {
+  margin-top: 0 !important;
+}
+
+.theme-doc-sidebar-item-link .menu__link {
+  border-top: 1px solid grey;
+  border-left: 2px solid white;
+  border-bottom: 1px solid grey;
+  border-right: 2px solid white;
+  border-radius: 0;
+  background: silver;
+}
+
+.theme-doc-sidebar-item-link .menu__link.menu__link--active {
+  border-right: 0;
+} */
+
+.theme-doc-sidebar-item-link .menu__link {
+  border: 3px solid white;
+  border-right-color: black;
+  border-bottom-color: black;
+  background: silver;
+}
+
+.theme-doc-sidebar-item-link .menu__link.menu__link--active {
+  border-color: black;
   border-right-color: white;
   border-bottom-color: white;
 }
