@@ -4,11 +4,11 @@ import styles from './button.module.css';
 import Link from '@docusaurus/Link';
 import { NavLink } from 'react-router-dom'
 
-export default function Button(props) {
+export default function Button({className, ...props}) {
   return (
     <NavLink
       {...props}
-      className={isActive => clsx(styles.button, isActive && styles.active)}
+      className={isActive => clsx(className, styles.button, isActive && styles.active)}
     />
   );
 }

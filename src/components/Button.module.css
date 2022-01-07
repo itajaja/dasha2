@@ -7,9 +7,9 @@
   padding: 4px;
   font-size: large;
   cursor: pointer;
-  /* font-family: var(--ifm-font-family-base); */
   color: black;
   text-decoration: none;
+  display: inline-block;
 }
 
 .button:hover {
