@@ -6,13 +6,13 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: blue;
-  --ifm-color-primary-dark: blue;
-  --ifm-color-primary-darker: blue;
-  --ifm-color-primary-darkest: blue;
-  --ifm-color-primary-light: blue;
-  --ifm-color-primary-lighter: blue;
-  --ifm-color-primary-lightest: blue;
+  --ifm-color-primary: #010181;
+  --ifm-color-primary-dark: #010181;
+  --ifm-color-primary-darker: #010181;
+  --ifm-color-primary-darkest: #010181;
+  --ifm-color-primary-light: #010181;
+  --ifm-color-primary-lighter: #010181;
+  --ifm-color-primary-lightest: #010181;
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: 'Windows 95';
   --ifm-heading-font-weight: 100;
@@ -43,41 +43,28 @@ div {
 
 hr {
   background-color: silver;
-  border: 3px solid black;
+  border: 2px solid black;
   border-right-color: white;
   border-bottom-color: white;
 }
 
-html footer {
-  background-color: black;
-}
-
-/* .theme-doc-sidebar-item-link {
-  margin-top: 0 !important;
-}
-
 .theme-doc-sidebar-item-link .menu__link {
-  border-top: 1px solid grey;
-  border-left: 2px solid white;
-  border-bottom: 1px solid grey;
-  border-right: 2px solid white;
-  border-radius: 0;
-  background: silver;
-}
-
-.theme-doc-sidebar-item-link .menu__link.menu__link--active {
-  border-right: 0;
-} */
-
-.theme-doc-sidebar-item-link .menu__link {
-  border: 3px solid white;
+  border: 2px solid white;
   border-right-color: black;
   border-bottom-color: black;
   background: silver;
+  border-radius: 0;
 }
 
 .theme-doc-sidebar-item-link .menu__link.menu__link--active {
   border-color: black;
   border-right-color: white;
   border-bottom-color: white;
+}
+
+/* XXX this is a little dangerous. it hides the first element of the sidebar,
+  which by convention should be the index element
+*/
+.theme-doc-sidebar-item-link.menu__list-item:first-child {
+  display: none;
 }

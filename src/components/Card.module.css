@@ -1,0 +1,18 @@
+.card {
+  background-color: silver;
+  border: 2px solid white;
+  border-right-color: black;
+  border-bottom-color: black;
+  margin: 1rem 0;
+}
+
+.title {
+  background: var(--ifm-color-primary);
+  color: white;
+  padding: 0 .5rem;
+  margin: 2px;
+}
+
+.content {
+  padding: 1rem;
+}
