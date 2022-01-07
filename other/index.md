@@ -1,5 +1,1 @@
----
-title: ''
----
-
-![](/img/cosmos-hotel.jpg)
+WIP

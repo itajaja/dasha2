@@ -21,17 +21,8 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        // docs: {
-        //   sidebarPath: require.resolve('./sidebars.js'),
-        //   // Please change this to your repo.
-        //   editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        // },
-        // blog: {
-        //   showReadingTime: true,
-        //   // Please change this to your repo.
-        //   editUrl:
-        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        // },
+        docs: false,
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -46,7 +37,6 @@ const config = {
         id: 'artist',
         path: 'artist',
         routeBasePath: 'artist',
-        // sidebarPath: require.resolve('./internal/learn/sidebars.js'),
       },
     ],
     [
@@ -55,7 +45,6 @@ const config = {
         id: 'scholar',
         path: 'scholar',
         routeBasePath: 'scholar',
-        // sidebarPath: require.resolve('./internal/learn/sidebars.js'),
       },
     ],
     [
@@ -64,7 +53,6 @@ const config = {
         id: 'other',
         path: 'other',
         routeBasePath: 'other',
-        // sidebarPath: require.resolve('./internal/learn/sidebars.js'),
       },
     ],
   ],
@@ -75,30 +63,14 @@ const config = {
       colorMode: { disableSwitch: true },
       navbar: {
         title: 'Dasha Filippova',
-      //   logo: {
-      //     alt: 'My Site Logo',
-      //     src: 'img/logo.svg',
-      //   },
         items: [
-      //     {
-      //       type: 'doc',
-      //       docId: 'intro',
-      //       position: 'left',
-      //       label: 'Tutorial',
-      //     },
           {to: '/artist', label: 'Artist', position: 'left'},
           {to: '/scholar', label: 'Scholar', position: 'left'},
           {to: '/other', label: 'Other', position: 'left'},
           {to: '/about', label: 'About', position: 'left'},
-      //     {
-      //       href: 'https://github.com/facebook/docusaurus',
-      //       label: 'GitHub',
-      //       position: 'right',
-      //     },
         ],
       },
       footer: {
-        // style: 'dark',
         copyright: `Copyright © ${new Date().getFullYear()} Darja Filippova`,
       },
     }),
