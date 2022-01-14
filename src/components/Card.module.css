@@ -16,3 +16,11 @@
 .content {
   padding: 1rem;
 }
+
+.tileContainer {
+  width: fit-content;
+}
+
+.tileContent {
+  padding: 2rem;
+}
