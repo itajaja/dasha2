@@ -2,4 +2,4 @@
 
 Agitatsia was the recipient of the 2021 [Russian Art Focus Prize](https://www.theartnewspaper.com/2021/09/04/winners-of-the-russian-art-focus-prize-announced-at-viennacontemporary) for “best research paper,” for the article "[Party of the Dead: Necroaesthetics and Transformation of Political Performativity in Russia during the Pandemic](https://artmargins.com/party-of-the-dead-necroaesthetics-and-transformation-of-political-performanity-in-russia-during-the-pandemic/)", published in the online magazine ArtMargins.com in 2021.
 
-Agitatsia is participating in the [Performance Philosophy Conference,](https://www.uniarts.fi/en/performance-philosophy-conference-2021/) taking place in Helsinki 15-18 June, 2022.
+Agitatsia participated in the [Performance Philosophy Conference](https://www.uniarts.fi/en/performance-philosophy-conference-2021/), taking place in Helsinki 15-18 June, 2022.
