@@ -1,41 +1,24 @@
-# Website
+# darjafilippova.com
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+Personal website of Dasha (Darja) Filippova — performance artist, ritual theatre maker, and scholar.
 
-### Installation
+A plain static site: no build step, no dependencies.
 
-```
-$ yarn
-```
+- `index.html` — the whole site (single page)
+- `styles.css` — styles
+- `site.js` — gallery toggles, lightbox, scroll-reveal, nav state
+- `img/` — photographs
 
-### Local Development
-
-```
-$ yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-### Build
+## Local preview
 
 ```
-$ yarn build
+python3 -m http.server 8000
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+then open http://localhost:8000.
 
-### Deployment
+## Deployment
 
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Pushes to `main` are published to the `gh-pages` branch by
+`.github/workflows/deploy.yml`, which GitHub Pages serves at
+[darjafilippova.com](http://darjafilippova.com).
