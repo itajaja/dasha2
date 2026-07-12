@@ -41,14 +41,6 @@ nav { position: fixed; top: 0px; left: 0px; right: 0px; display: flex; justify-c
    so both dissolve smoothly instead of cutting off at the bar's bottom edge. */
 nav::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 45%, rgba(0, 0, 0, 0.85) 58%, rgba(0, 0, 0, 0.62) 70%, rgba(0, 0, 0, 0.38) 81%, rgba(0, 0, 0, 0.16) 91%, transparent); mask-image: linear-gradient(rgba(0, 0, 0, 1) 45%, rgba(0, 0, 0, 0.85) 58%, rgba(0, 0, 0, 0.62) 70%, rgba(0, 0, 0, 0.38) 81%, rgba(0, 0, 0, 0.16) 91%, transparent); }
 
-nav.on-dark { background: linear-gradient(rgba(29, 21, 16, 0.92) 45%, rgba(29, 21, 16, 0.78) 58%, rgba(29, 21, 16, 0.57) 70%, rgba(29, 21, 16, 0.35) 81%, rgba(29, 21, 16, 0.15) 91%, transparent); }
-
-nav.on-dark .wordmark { color: var(--bone); }
-
-nav.on-dark ul a { color: rgba(237, 230, 214, 0.65); }
-
-nav.on-dark ul a:hover, nav.on-dark ul a.active { color: var(--gold-bright); border-color: var(--gold-bright); }
-
 .wordmark { font-family: Cormorant, serif; font-weight: 500; font-size: 1.08rem; letter-spacing: 0.04em; color: var(--peat); text-decoration: none; transition: color 0.4s; }
 
 nav ul { display: flex; gap: 26px; list-style: none; }
