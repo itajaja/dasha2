@@ -72,7 +72,7 @@
 
   function onScroll() {
     /* how far down the page we are, 0 at the top → 1 at the bottom;
-       the stylesheet uses this to pull the two red threads apart */
+       the stylesheet uses this to pull the two green threads apart */
     var scrollable = document.documentElement.scrollHeight - window.innerHeight;
     var progress = scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
     rootStyle.setProperty('--thread-sep', progress.toFixed(4));
