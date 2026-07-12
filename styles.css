@@ -35,9 +35,13 @@ body { background: var(--moss-muted); color: var(--peat); font-family: Spectral,
 
 .chapel .fray circle { fill: var(--kinovar-bright); }
 
-nav { position: fixed; top: 0px; left: 0px; right: 0px; display: flex; justify-content: space-between; align-items: baseline; padding: 22px var(--pad-r) 18px var(--pad-l); z-index: 10; background: linear-gradient(rgba(174, 187, 149, 0.92) 55%, transparent); backdrop-filter: blur(2px); }
+nav { position: fixed; top: 0px; left: 0px; right: 0px; display: flex; justify-content: space-between; align-items: baseline; padding: 22px var(--pad-r) 18px var(--pad-l); z-index: 10; background: linear-gradient(rgba(174, 187, 149, 0.92) 45%, rgba(174, 187, 149, 0.78) 58%, rgba(174, 187, 149, 0.57) 70%, rgba(174, 187, 149, 0.35) 81%, rgba(174, 187, 149, 0.15) 91%, transparent); }
 
-nav.on-dark { background: linear-gradient(rgba(29, 21, 16, 0.92) 55%, transparent); }
+/* The blur sits on its own layer, faded with the same eased curve as the tint,
+   so both dissolve smoothly instead of cutting off at the bar's bottom edge. */
+nav::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; -webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 45%, rgba(0, 0, 0, 0.85) 58%, rgba(0, 0, 0, 0.62) 70%, rgba(0, 0, 0, 0.38) 81%, rgba(0, 0, 0, 0.16) 91%, transparent); mask-image: linear-gradient(rgba(0, 0, 0, 1) 45%, rgba(0, 0, 0, 0.85) 58%, rgba(0, 0, 0, 0.62) 70%, rgba(0, 0, 0, 0.38) 81%, rgba(0, 0, 0, 0.16) 91%, transparent); }
+
+nav.on-dark { background: linear-gradient(rgba(29, 21, 16, 0.92) 45%, rgba(29, 21, 16, 0.78) 58%, rgba(29, 21, 16, 0.57) 70%, rgba(29, 21, 16, 0.35) 81%, rgba(29, 21, 16, 0.15) 91%, transparent); }
 
 nav.on-dark .wordmark { color: var(--bone); }
 
