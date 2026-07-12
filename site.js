@@ -60,9 +60,7 @@
     reveals.forEach(function (el) { el.classList.add('in'); });
   }
 
-  /* ---- nav: on-dark over the hero, active section link ---- */
-  var nav = document.getElementById('topnav');
-  var hero = document.getElementById('hero');
+  /* ---- nav: active section link ---- */
   var navLinks = Array.prototype.slice.call(document.querySelectorAll('#topnav ul a'));
   var sections = navLinks
     .map(function (a) { return document.getElementById((a.getAttribute('href') || '').slice(1)); })
@@ -77,10 +75,6 @@
     var progress = scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
     rootStyle.setProperty('--thread-sep', progress.toFixed(4));
 
-    if (nav && hero) {
-      var navHeight = nav.offsetHeight || 60;
-      nav.classList.toggle('on-dark', hero.getBoundingClientRect().bottom > navHeight);
-    }
     var current = null;
     var probe = window.innerHeight * 0.35;
     sections.forEach(function (sec) {
