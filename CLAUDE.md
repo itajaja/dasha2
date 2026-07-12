@@ -27,24 +27,17 @@ Nice touches visitors will notice: sections fade in gently as you scroll, the to
 Think of it like editing a book with an editor:
 
 1. **The contractor (Claude) prepares the change** on a separate draft copy, so the live website is never touched directly.
-2. **The contractor sends a proposal** — on GitHub this is called a *pull request* (a "PR"). It's simply a page that shows what would change, and where you can approve it.
-3. **You (the owner) approve it** by pressing the **"Merge"** button on that page.
+2. **You press the "Create PR" button** shown in the Claude interface. This turns the draft into a proposal (a *pull request*, or "PR").
+3. **You merge the PR.** The link to it appears right in the same interface.
 4. **The website updates itself automatically.** Within a few minutes of merging, the change is live at darjafilippova.com. Nothing else needs to be done.
 
-### If you're asked to "merge the pull request", here's exactly how
-
-1. Open the link to the pull request (the contractor will always give you the link).
-2. Read the description at the top — it explains the change in plain words.
-3. If you're happy, scroll down and click the green **"Merge pull request"** button, then click **"Confirm merge"**.
-4. That's it. Wait a few minutes, then visit darjafilippova.com and refresh the page to see the change.
-
-If you're *not* happy, don't click anything — just tell the contractor what you'd like different. Nothing changes on the live site until you merge.
+If you're *not* happy with the change, don't create or merge anything — just tell the contractor what you'd like different. Nothing changes on the live site until you merge.
 
 ## Notes for Claude (the contractor)
 
 - **Audience first:** explain everything in terms of what visitors will see and experience. No jargon in messages, commit summaries the owner might read, or PR descriptions. If a technical term is unavoidable (like "pull request"), explain it in one plain sentence.
 - **Always show the end result:** finish every piece of work by publishing an artifact — one link the owner can open, scroll, and click like the real website. Build it with the preview script (see technical notes below), never by hand. In these previews the photographs appear as black rectangles of exactly the right size and place, and a small banner at the bottom says so — everything else (text, colors, fonts, animations, menus, galleries) is the real site. Don't substitute screenshots unless the owner asks for them.
-- **Never change the live site directly:** work on a branch, push it, and give the owner clear, numbered, click-by-click instructions for opening and merging the pull request.
+- **Never change the live site directly:** work on a branch and push it. Do not create the pull request yourself and do not paste GitHub links — the Claude interface shows a "Create PR" button and the relevant links on its own. When the work is ready, simply ask the owner to click "Create PR" and then merge the PR. No click-by-click instructions.
 - Technical facts, kept out of the owner's way:
   - Plain static site — no build step, no dependencies. `index.html` is the entire page, `styles.css` the styling, `site.js` the interactions (gallery open/close, lightbox, scroll-reveal, nav state), `img/` the photographs.
   - Preview locally with `python3 -m http.server 8000` and open http://localhost:8000.
