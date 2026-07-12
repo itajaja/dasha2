@@ -187,13 +187,18 @@
       threads.push({ pts: sample(pts), width: narrow ? 1.1 : 1.4, opacity: +(0.5 + 0.12 * Math.cos(i)).toFixed(2), bright: !!(i % 2) });
     }
 
-    /* the reunited thread reaching into the Contact knot */
+    /* the reunited thread leaves the trunk and curls into the Contact knot —
+       a tendril, tangent to the thread as it departs, not a right-angled branch */
+    var mouthX = clusters[last].x - 17;              // the open left side of the spiral
+    var jy = clusters[last].y, jd = mouthX - railX;
     threads.push({
       pts: sample([
-        { x: railX, y: reconnectY },
-        { x: (railX + clusters[last].x) / 2, y: clusters[last].y - 6 },
-        { x: clusters[last].x, y: clusters[last].y }
-      ]), width: narrow ? 1.3 : 1.7, opacity: 0.85, bright: false
+        { x: railX,             y: reconnectY },     // the point where the threads become one
+        { x: railX + 2,         y: jy - 7 },         // slip away still almost vertical
+        { x: railX + jd * 0.40, y: jy + 9 },         // swing out and dip below
+        { x: railX + jd * 0.76, y: jy + 3 },
+        { x: mouthX,            y: jy }               // curl into the mouth of the spiral
+      ]), width: narrow ? 1.3 : 1.7, opacity: 0.9, bright: false
     });
 
     render();
