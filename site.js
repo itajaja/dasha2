@@ -68,7 +68,15 @@
     .map(function (a) { return document.getElementById((a.getAttribute('href') || '').slice(1)); })
     .filter(Boolean);
 
+  var rootStyle = document.documentElement.style;
+
   function onScroll() {
+    /* how far down the page we are, 0 at the top → 1 at the bottom;
+       the stylesheet uses this to pull the two red threads apart */
+    var scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    var progress = scrollable > 0 ? Math.min(1, Math.max(0, window.scrollY / scrollable)) : 0;
+    rootStyle.setProperty('--thread-sep', progress.toFixed(4));
+
     if (nav && hero) {
       var navHeight = nav.offsetHeight || 60;
       nav.classList.toggle('on-dark', hero.getBoundingClientRect().bottom > navHeight);

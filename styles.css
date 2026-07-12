@@ -16,6 +16,12 @@ body { background: var(--moss-muted); color: var(--peat); font-family: Spectral,
 
 .thread-b { width: 1.5px; opacity: 0.55; background: var(--kinovar-bright); box-shadow: rgba(229, 67, 46, 0.3) 0px 0px 6px; }
 
+/* --thread-sep goes from 0 (top of page) to 1 (bottom); set live in site.js.
+   The two threads drift apart as you scroll — kept small so neither one
+   ever reaches the text, which starts 44px right of the thread (22px on phones). */
+.thread { transform: translateX(calc(var(--thread-sep, 0) * -9px)); }
+.thread-b { transform: translateX(calc(var(--thread-sep, 0) * 13px)); }
+
 .fray { display: block; height: 46px; margin-bottom: 16px; margin-left: calc(var(--thread-x) - var(--pad-l)); stroke: var(--kinovar); stroke-width: 1.8; stroke-linecap: round; fill: none; opacity: 0.9; }
 
 .fray circle { fill: var(--kinovar); stroke: none; }
@@ -255,6 +261,8 @@ footer { padding: 48px var(--pad-r) 42px var(--pad-l); border-top: 1px solid rgb
 
 @media (max-width: 760px) {
   :root { --thread-x: 16px; --pad-l: calc(var(--thread-x) + 22px); --pad-r: 22px; }
+  .thread { transform: translateX(calc(var(--thread-sep, 0) * -5px)); }
+  .thread-b { transform: translateX(calc(var(--thread-sep, 0) * 8px)); }
   nav { flex-direction: column; gap: 10px; align-items: flex-start; }
   nav ul { gap: 15px; flex-wrap: wrap; }
   .hero-full { min-height: 92vh; }
