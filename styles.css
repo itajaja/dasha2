@@ -93,11 +93,11 @@ p + p { margin-top: 1.15em; }
 
 .hero-bio { font-size: 1.07rem; }
 
-.hero-bio .lead-in { font-family: Cormorant, serif; font-style: italic; font-weight: 500; font-size: 1.5rem; line-height: 1.4; display: block; margin-bottom: 16px; }
+.hero-bio .lead-in { font-family: Cormorant, serif; font-style: italic; font-weight: 700; font-size: 1.62rem; line-height: 1.38; display: block; margin-bottom: 16px; }
 
-.hero-bio .pull { font-family: Cormorant, serif; font-style: italic; font-weight: 500; font-size: 1.32rem; line-height: 1.42; display: block; margin: 20px 0px; color: var(--peat); }
+.hero-bio .bio-pull { font-family: Cormorant, serif; font-style: italic; font-weight: 700; font-size: 1.42rem; line-height: 1.4; display: block; margin: 22px 0px; color: var(--peat); }
 
-.hero-bio .thread-word { color: var(--kinovar); font-weight: 600; }
+.hero-bio .thread-word { color: var(--kinovar); font-weight: 700; }
 
 .ph { background: rgba(255, 255, 255, 0.34); border: 1px dashed var(--moss); display: flex; align-items: center; justify-content: center; text-align: center; padding: 16px; }
 
